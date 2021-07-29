@@ -17,6 +17,7 @@ mod numbering_property;
 mod outline;
 mod paragraph_property;
 mod size;
+mod spacing;
 mod strike;
 mod table_borders;
 mod table_cell_property;
@@ -33,5 +34,5 @@ pub use self::{
     italics::*, justification::*, numbering_id::*, numbering_property::*, outline::*,
     paragraph_property::*, size::*, strike::*, table_borders::*, table_cell_property::*,
     table_indent::*, table_justification::*, table_property::*, table_row_property::*,
-    table_width::*, underline::*,
+    table_width::*, underline::*, spacing::*,
 };

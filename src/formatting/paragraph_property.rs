@@ -3,7 +3,7 @@ use strong_xml::{XmlRead, XmlWrite};
 
 use crate::{
     __setter, __xml_test_suites,
-    formatting::{Borders, Justification, NumberingProperty},
+    formatting::{Borders, Justification, NumberingProperty, Spacing},
 };
 
 /// Paragraph Property
@@ -35,6 +35,10 @@ pub struct ParagraphProperty<'a> {
     /// Specifies that the paragraph should be numbered.
     #[xml(child = "w:numPr")]
     pub numbering: Option<NumberingProperty>,
+
+    /// Spacing between paragraphs and between lines.
+    #[xml(child = "w:spacing")]
+    pub spacing: Option<Spacing>,
 }
 
 impl<'a> ParagraphProperty<'a> {

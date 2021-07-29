@@ -74,7 +74,7 @@ impl<'a> Style<'a> {
     __setter!(character: CharacterProperty<'a>);
 }
 
-#[derive(Debug, XmlRead, XmlWrite)]
+#[derive(Debug, XmlRead, XmlWrite, PartialEq)]
 #[xml(tag = "w:basedOn")]
 pub struct BasedOn<'a> {
     #[xml(attr = "w:val")]
@@ -96,7 +96,6 @@ impl<'a, S: Into<Cow<'a, str>>> From<S> for StyleName<'a> {
 }
 
 #[derive(Debug, Eq, PartialEq)]
-#[cfg_attr(test, derive(PartialEq))]
 pub enum StyleType {
     Character,
     Paragraph,
