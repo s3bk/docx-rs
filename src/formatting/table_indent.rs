@@ -16,13 +16,13 @@ use crate::{__string_enum, __xml_test_suites};
 #[xml(tag = "w:tblInd")]
 pub struct TableIndent {
     #[xml(attr = "w:w")]
-    pub value: Option<usize>,
+    pub value: Option<isize>,
     #[xml(attr = "w:type")]
     pub unit: Option<TableIndentUnit>,
 }
 
-impl From<usize> for TableIndent {
-    fn from(val: usize) -> Self {
+impl From<isize> for TableIndent {
+    fn from(val: isize) -> Self {
         TableIndent {
             value: Some(val),
             unit: None,
@@ -39,8 +39,8 @@ impl From<TableIndentUnit> for TableIndent {
     }
 }
 
-impl From<(usize, TableIndentUnit)> for TableIndent {
-    fn from(val: (usize, TableIndentUnit)) -> Self {
+impl From<(isize, TableIndentUnit)> for TableIndent {
+    fn from(val: (isize, TableIndentUnit)) -> Self {
         TableIndent {
             value: Some(val.0),
             unit: Some(val.1),
