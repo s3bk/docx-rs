@@ -44,8 +44,10 @@ pub enum NumberingFormatVal {
     LowerLetter,
     LowerRoman,
     Ordinal,
+    OrdinalText,
     UpperLetter,
     UpperRoman,
+    IrohaFullWidth,
     None,
 }
 
@@ -63,8 +65,10 @@ __string_enum! {
         LowerLetter = "lowerLetter",
         LowerRoman = "lowerRoman",
         Ordinal = "ordinal",
+        OrdinalText = "ordinalText",
         UpperLetter = "upperLetter",
         UpperRoman = "upperRoman",
+        IrohaFullWidth = "irohaFullWidth",
         None = "none",
     }
 }
