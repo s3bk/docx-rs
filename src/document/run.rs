@@ -4,7 +4,7 @@ use strong_xml::{XmlRead, XmlWrite};
 
 use crate::{
     __setter, __xml_test_suites,
-    document::{r#break::Break, tab::Tab, text::Text},
+    document::{r#break::Break, tab::Tab, text::Text, drawing::Drawing},
     formatting::CharacterProperty,
 };
 
@@ -35,7 +35,8 @@ pub struct Run<'a> {
     #[xml(
         child = "w:br",
         child = "w:t",
-        child = "w:tab"
+        child = "w:tab",
+        child = "w:drawing"
     )]
     /// Specifies the content of a run
     pub content: Vec<RunContent<'a>>,
@@ -67,6 +68,7 @@ impl<'a> Run<'a> {
             RunContent::Break(_) => None,
             RunContent::Tab(_) => None,
             RunContent::Text(Text { text, .. }) => Some(text),
+            RunContent::Drawing(_) => None,
         })
     }
 
@@ -75,6 +77,7 @@ impl<'a> Run<'a> {
             RunContent::Break(_) => None,
             RunContent::Tab(_) => None,
             RunContent::Text(Text { text, .. }) => Some(text),
+            RunContent::Drawing(_) => None,
         })
     }
 }
@@ -91,6 +94,9 @@ pub enum RunContent<'a> {
 
     #[xml(tag = "w:t")]
     Text(Text<'a>),
+
+    #[xml(tag = "w:drawing")]
+    Drawing(Drawing),
 }
 
 __xml_test_suites!(

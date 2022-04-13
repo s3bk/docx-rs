@@ -7,6 +7,7 @@ mod bookmark_end;
 mod bookmark_start;
 mod r#break;
 mod comment_range;
+mod drawing;
 mod grid_column;
 mod hyperlink;
 mod paragraph;

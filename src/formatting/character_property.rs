@@ -3,7 +3,7 @@ use strong_xml::{XmlRead, XmlWrite};
 
 use crate::{
     __setter, __xml_test_suites,
-    formatting::{Bold, Color, Dstrike, Italics, Outline, Size, Strike, Underline},
+    formatting::{Bold, Color, Dstrike, Italics, Outline, Size, Strike, Underline, Fonts},
 };
 
 /// Character Property
@@ -56,6 +56,9 @@ pub struct CharacterProperty<'a> {
     /// Specifies that the content should be displayed with an underline
     #[xml(child = "w:u")]
     pub underline: Option<Underline<'a>>,
+    /// Fonts
+    #[xml(child = "w:rFonts")]
+    pub fonts: Option<Fonts<'a>>,
 }
 
 impl<'a> CharacterProperty<'a> {

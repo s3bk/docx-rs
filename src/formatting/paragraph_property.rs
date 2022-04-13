@@ -39,6 +39,9 @@ pub struct ParagraphProperty<'a> {
     /// Spacing between paragraphs and between lines.
     #[xml(child = "w:spacing")]
     pub spacing: Option<Spacing>,
+    
+    #[xml(child = "w:ind")]
+    pub indent: Option<Indent>,
 }
 
 impl<'a> ParagraphProperty<'a> {
@@ -47,6 +50,15 @@ impl<'a> ParagraphProperty<'a> {
     __setter!(border: Option<Borders<'a>>);
     __setter!(numbering: Option<NumberingProperty>);
 }
+
+#[derive(Debug, Default, XmlRead, XmlWrite)]
+#[cfg_attr(test, derive(PartialEq))]
+#[xml(tag = "w:ind")]
+pub struct Indent {
+    #[xml(attr = "w:left")]
+    pub left: Option<isize>,
+}
+
 
 #[derive(Debug, XmlRead, XmlWrite)]
 #[cfg_attr(test, derive(PartialEq))]

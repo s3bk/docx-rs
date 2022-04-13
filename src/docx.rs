@@ -136,7 +136,11 @@ impl DocxFile {
     /// Extracts from reader
     pub fn from_reader<T: Read + Seek>(reader: T) -> DocxResult<Self> {
         let mut zip = ZipArchive::new(reader)?;
+        Self::from_zip(&mut zip)
+    }
 
+    /// Extracts from ZIP file
+    pub fn from_zip<T: Read + Seek>(zip: &mut ZipArchive<T>) -> DocxResult<Self> {
         macro_rules! read {
             ($xml:tt, $name:expr) => {{
                 let mut file = zip.by_name($name)?;

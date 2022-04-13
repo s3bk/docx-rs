@@ -9,6 +9,7 @@ mod borders;
 mod character_property;
 mod color;
 mod dstrike;
+mod fonts;
 mod indent_level;
 mod italics;
 mod justification;
@@ -34,5 +35,5 @@ pub use self::{
     italics::*, justification::*, numbering_id::*, numbering_property::*, outline::*,
     paragraph_property::*, size::*, strike::*, table_borders::*, table_cell_property::*,
     table_indent::*, table_justification::*, table_property::*, table_row_property::*,
-    table_width::*, underline::*, spacing::*,
+    table_width::*, underline::*, spacing::*, fonts::*,
 };
