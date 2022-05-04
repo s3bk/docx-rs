@@ -10,7 +10,7 @@ description = "A Rust library for parsing and generating docx files."
 keywords = ["docx", "generator", "openxml", "parser"]
 
 [features]
-log = ["strong-xml/log"]
+enable_log = ["strong-xml/log"]
 
 [dependencies]
 derive_more = "0.99.5"
