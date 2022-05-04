@@ -9,10 +9,13 @@ repository = "https://github.com/PoiScript/docx-rs"
 description = "A Rust library for parsing and generating docx files."
 keywords = ["docx", "generator", "openxml", "parser"]
 
+[features]
+log = ["strong-xml/log"]
+
 [dependencies]
 derive_more = "0.99.5"
 log = "0.4.8"
-strong-xml = { version = "0.6.2", features = ["log"] }
+strong-xml = { version = "0.6.2" }
 
 [dependencies.zip]
 default-features = false
