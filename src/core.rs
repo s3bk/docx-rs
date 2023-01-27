@@ -9,7 +9,7 @@ use hard_xml::{XmlRead, XmlResult, XmlWrite, XmlWriter};
 use crate::schema::SCHEMA_CORE;
 
 #[derive(Debug, Default, XmlRead)]
-#[xml(tag = "cp:coreProperties")]
+#[xml(tag = "coreProperties")]
 pub struct Core<'a> {
     #[xml(flatten_text = "dc:title")]
     pub title: Option<Cow<'a, str>>,

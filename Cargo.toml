@@ -15,7 +15,7 @@ enable_log = ["hard-xml/log"]
 [dependencies]
 derive_more = "0.99.5"
 log = "0.4.8"
-hard-xml = { version = "1.21" }
+hard-xml = { git="https://github.com/s3bk/hard-xml", version = "1.21" }
 
 [dependencies.zip]
 default-features = false
