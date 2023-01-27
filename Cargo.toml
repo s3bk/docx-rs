@@ -1,6 +1,6 @@
 [package]
 name = "docx"
-version = "1.1.2"
+version = "1.2.0"
 authors = ["PoiScript <poiscript@gmail.com>"]
 edition = "2018"
 license = "MIT"
@@ -10,12 +10,12 @@ description = "A Rust library for parsing and generating docx files."
 keywords = ["docx", "generator", "openxml", "parser"]
 
 [features]
-enable_log = ["strong-xml/log"]
+enable_log = ["hard-xml/log"]
 
 [dependencies]
 derive_more = "0.99.5"
 log = "0.4.8"
-strong-xml = { version = "0.6.2" }
+hard-xml = { version = "1.21" }
 
 [dependencies.zip]
 default-features = false
@@ -23,4 +23,4 @@ features = ["deflate", "time"]
 version = "0.6.2"
 
 [dev-dependencies]
-env_logger = "0.7.1"
+env_logger = "0.10"

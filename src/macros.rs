@@ -51,7 +51,7 @@ macro_rules! __setter {
 macro_rules! __xml_test_suites {
     ($type:tt, $($struct:expr, $string:expr,)*) => {
         #[test]
-        fn xml_test_suites() -> strong_xml::XmlResult<()> {
+        fn xml_test_suites() -> hard_xml::XmlResult<()> {
             let _ = env_logger::builder()
                 .is_test(true)
                 .format_timestamp(None)

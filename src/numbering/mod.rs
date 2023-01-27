@@ -9,7 +9,7 @@ pub use self::{
 };
 
 use std::borrow::Cow;
-use strong_xml::{XmlRead, XmlWrite};
+use hard_xml::{XmlRead, XmlWrite};
 
 /// The root element of the numbering document part.
 #[derive(Debug, Default, XmlRead)]

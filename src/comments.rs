@@ -3,7 +3,7 @@
 //! The corresponding ZIP item is `/word/comments.xml`.
 
 use std::borrow::Cow;
-use strong_xml::{XmlRead};
+use hard_xml::{XmlRead};
 
 use crate::document::Paragraph;
 

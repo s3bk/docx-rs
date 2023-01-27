@@ -1,7 +1,7 @@
 use std::fs::File;
 use std::io::{Read, Seek, Write};
 use std::path::Path;
-use strong_xml::{XmlRead, XmlWrite, XmlWriter};
+use hard_xml::{XmlRead, XmlWrite, XmlWriter};
 use zip::{result::ZipError, write::FileOptions, CompressionMethod, ZipArchive, ZipWriter};
 
 use crate::{
@@ -160,7 +160,7 @@ impl DocxFile {
                         file.read_to_string(&mut buffer)?;
                         Some(buffer)
                     }
-                };
+                }
             };
         }
 

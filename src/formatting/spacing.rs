@@ -1,7 +1,7 @@
-use strong_xml::{XmlRead, XmlWrite};
+use hard_xml::{XmlRead, XmlWrite};
 use std::str::FromStr;
 use std::fmt;
-use crate::{__xml_test_suites, __string_enum};
+use crate::{__string_enum};
 
 /// Size
 ///

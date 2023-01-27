@@ -2,7 +2,7 @@ use std::io::Error as IOError;
 use std::error::Error;
 use std::fmt::{self, Display};
 
-use strong_xml::XmlError;
+use hard_xml::XmlError;
 use zip::result::ZipError;
 
 /// Error type of docx-rs
