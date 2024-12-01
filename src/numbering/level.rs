@@ -10,7 +10,7 @@ pub struct Level<'a> {
     pub index: usize,
 
     #[xml(child = "w:lvlText")]
-    pub level_text: LevelText<'a>,
+    pub level_text: Option<LevelText<'a>>,
 
     #[xml(child = "w:numFmt")]
     pub numbering_format: NumberingFormat,
